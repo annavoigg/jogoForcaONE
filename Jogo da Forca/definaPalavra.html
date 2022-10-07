@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="assets/css/definaPalavra.css">
+
+    <link rel="shortcut icon" href="img/mail-encryption-interface-symbol-of-an-envelope-back-with-a-padlock_icon-icons.com_56509.ico" type="image/x-icon">
+    
+    <script src="https://kit.fontawesome.com/3f3c4f089d.js" crossorigin="anonymous"></script>
+    
+    <title>Jogo da Forca</title>
+</head>
+<body>
+
+    <section class="home">
+
+        <header>
+            
+            <nav>
+                
+                <div class="logo">
+
+                    <img src="assets/img/logo.png" alt="">
+
+                </div>
+
+            </nav>
+
+        </header>
+
+    </section>
+
+    <section class="principal">
+
+
+        <div class="palavra ativo" id>
+
+            <textarea id="addPalavra" class="palavraInicial" placeholder="Digite uma palavra ou frase" cols="35" rows="5" maxlength="8"></textarea>
+
+        </div>
+        <div class="retorno">
+
+            <textarea id="retornaPalavra" class="subTexto" placeholder="Teste" cols="35" rows="5" ></textarea>
+
+        </div>
+
+<!--        
+        <div id="temporario" class="insira-mensagem ativo">
+
+        </div> -->
+
+    </section>
+
+    <section class="endpage">
+
+        <div class="alerta">
+
+            <p class="descAlerta"><i class="fa-solid fa-circle-exclamation"></i> Máx. de 8 letras</p>
+
+        </div>
+
+        <div class="botoes">
+
+            <button onclick="verificaString()" class="btn1">Salvar e começar</button>
+
+            <button class="btn2"><a href="#">Cancelar</a></button>
+            
+        </div>
+
+
+    </section>
+
+    
+
+    <script src="assets/js/teste.js"></script> 
+    
+</body>
+</html>

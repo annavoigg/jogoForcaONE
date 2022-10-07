@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+
+    --alert-color: hsl(210, 9%, 31%);
+
+    --botao1-fundo: hsl(218, 48%, 36%);
+    --botao1-letra: hsl(199, 94%, 80%);
+
+    --botao2-fundo: hsl(199, 94%, 80%);
+    --botao2-letra: hsl(218, 48%, 36%);
+    
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+body{
+    padding-left: 3rem;
+    background-color: var(--background-color);
+    background-image: url(/assets/img/bg-inicial.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: -6rem ;
+
+    overflow-y: hidden;
+}
+
+.inicio .navbar img{
+    padding-top: 2rem;
+
+    height: 4.5rem;
+}
+
+.principal{
+    display: flex;
+}
+
+.forca{
+    position: relative;
+}
+
+.forca.ativo{
+    display: none;
+}
+
+.inputRandom{
+
+    margin-top: -20rem;
+    margin-right: -20rem;
+}
+
+
+.final{
+    margin-top: -6rem;
+}
+
+.botoes{
+
+    padding: 5rem;
+}
+
+.btn1 a, .btn2 a{
+    color: inherit;
+}
+
+.btn1, .btn2{
+    display: block;
+    width: 15rem;
+    height: 56px;
+
+    border-radius: 1rem;
+
+    cursor: pointer;
+
+    margin: 0 auto;
+    
+}
+
+.btn1{
+    color: var(--botao1-letra);
+    background-color: var(--botao1-fundo);
+}
+
+.btn2{
+    margin-top: 2rem;
+    color: var(--botao2-letra);
+    background-color: var(--botao2-fundo);
+}
+
+.btn1, .btn2{
+    border: 1px solid var(--botao-criptografar);
+
+}
+
+.btn1:hover, .btn2:hover{
+    opacity: 50%;
+}
+
