@@ -19,3 +19,7 @@ function verificaString(){
     console.log(palavras.includes(subTexto.value));
     console.log(palavras);
 }
+
+function olaLindes() {
+
+}
