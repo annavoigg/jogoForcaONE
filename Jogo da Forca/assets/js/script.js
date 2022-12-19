@@ -9,6 +9,8 @@ let letras = [];
 
 let erros = 6;
 
+
+
 let canvas = document.getElementById('canvas');
 
 function sorteiaPalavras(){
@@ -38,8 +40,11 @@ function verificarLetra(key){
 }
 
 function adicionarLetraIncorreta(){
+
     erros -= 1
 }
+
+
 
 
 function iniciarJogo(){
@@ -54,13 +59,13 @@ function iniciarJogo(){
     
     document.onkeydown = (e) =>{
 
-        let letra = e.key.toUpperCase();
+        let letraDigitada = e.key.toUpperCase();
     
-        if(verificarLetra(letra) && palavraSecreta.includes(letra)){
+        if(verificarLetra(letraDigitada) && palavraSecreta.includes(letraDigitada)){
     
             for(let i = 0; i < palavraSecreta.length; i++){
     
-                if(palavraSecreta[i] === letra){
+                if(palavraSecreta[i] === letraDigitada){
                     escreverLetraCorreta(i);
             
                 } 
@@ -69,8 +74,9 @@ function iniciarJogo(){
 
         } else {
     
-            adicionarLetraIncorreta(letra);
-            escreverLetraIncorreta(letra, erros);
+            adicionarLetraIncorreta(letraDigitada);
+            escreverLetraIncorreta(letraDigitada, erros);
+            desenhaCorpo(erros);
         }
     }
 
