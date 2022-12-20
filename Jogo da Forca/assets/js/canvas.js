@@ -5,7 +5,6 @@ function desenharCanvas(){
     tabuleiro.fillStyle = "transparent";
     tabuleiro.strokeStyle = "white";
 
-
     // manipulação 
     tabuleiro.fillRect(0, 0, 1200, 450);
     tabuleiro.beginPath();
