@@ -26,7 +26,11 @@
 body{
     padding-left: 3rem;
     background-color: var(--background-color);
+<<<<<<< HEAD
     background-image: url("/assets/img/bg-inicial.gif");
+=======
+    background-image: url(../img/bg-inicial.gif);
+>>>>>>> f1f30c5b33d64d1f74fa4fc5869cfa248470e82c
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-y: -6rem ;
