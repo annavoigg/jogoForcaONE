@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,19 +11,20 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- <link rel="shortcut icon" href="img/mail-encryption-interface-symbol-of-an-envelope-back-with-a-padlock_icon-icons.com_56509.ico" type="image/x-icon"> -->
-    
+
     <script src="https://kit.fontawesome.com/3f3c4f089d.js" crossorigin="anonymous"></script>
-    
+
     <title>Jogo da Forca</title>
 </head>
+
 <body>
 
     <section class="inicio">
 
         <header>
-            
+
             <div class="navbar">
-                
+
                 <div class="logo">
 
                     <img src="assets/img/logo.png" alt="">
@@ -42,9 +44,9 @@
 
             <canvas class="forcaItem" id="forca" width="1200px" height="450px"></canvas>
 
-        </div> 
+        </div>
 
-        
+
     </div>
 
     <section class="endpage">
@@ -53,21 +55,29 @@
 
             <button class="btn1" value="iniciar jogo" id="iniciarJogo" onclick="iniciarJogo()">Começar a jogar</button>
 
-            <button class="btn2"><a href="#">Adicionar nova palavra</a></button>
-            
+            <button class="btn2" onclick="adicionaPalavra()" data-inicio-addPalavra><a href="#">Adicionar nova palavra</a></button>
+
+        </div>
+
+        <div class="inputNovaPalavra">
+
+            <input type="text" onkeyup="this.value = this.value.toUpperCase()" data-input-novaPalavra>
+
         </div>
 
 
     </section>
 
-    
-    
-    
+
+
+
     <script type="text/javascript" src="assets/js/script.js"></script>
     <script type="text/javascript" src="assets/js/canvas.js"></script>
     <script type="text/javascript" src="assets/js/desenhaCorpo.js"></script>
     <script type="text/javascript" src="assets/js/desenhaTracinhos.js"></script>
     <script type="text/javascript" src="assets/js/desenhaLetras.js"></script>
-    
+    <script type="text/javascript" src="assets/js/adicionaNovaPalavra.js"></script>
+
 </body>
+
 </html>

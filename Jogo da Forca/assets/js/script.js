@@ -2,7 +2,7 @@
 
 let tabuleiro = document.getElementById("forca").getContext("2d");
 
-let palavras = [
+let listaPalavras = [
   "PARQUE",
   "PETECA",
   "CORDA",
@@ -26,7 +26,7 @@ let erros = 6;
 let canvas = document.getElementById("canvas");
 
 function sorteiaPalavras() {
-  let palavra = palavras[Math.floor(Math.random() * palavras.length)];
+  let palavra = listaPalavras[Math.floor(Math.random() * listaPalavras.length)];
 
   palavraSecreta = palavra;
   return palavraSecreta;
@@ -101,23 +101,3 @@ function checkChar(e) {
     return true;
   }
 }
-
-// escrever letra digitada
-
-//  if (textoComum.value.trim() == " " || textoComum.value.trim() == ""){
-//      alert("É necessário digitar uma mensagem.")
-//      garnet.classList.add("ativo")
-//   } else{
-//      garnet.classList.remove("ativo")
-//      caixaTexto.classList.remove("ativo")
-//  };
-
-// function checkChar(e) {
-//     const char = String.fromCharCode(e.keyCode);
-
-//     const padrao = '[A-Z0-9 ]';
-
-//     if (char.match(padrao)) {
-//         return true;
-//     }
-// }
