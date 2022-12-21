@@ -26,7 +26,10 @@
 body{
     padding-left: 3rem;
     background-color: var(--background-color);
+<<<<<<< HEAD
 
+=======
+>>>>>>> b94bf8596e2c6855f0fd41aa474288d4599172ad
     background-image: url(../img/bg-inicial.gif);
     background-size: 100%;
     background-repeat: no-repeat;
