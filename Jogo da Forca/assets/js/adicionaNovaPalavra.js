@@ -8,19 +8,17 @@ let sectionInputNovaPalavra = document.getElementById(
 
 
 function adicionaPalavra() {
-  listaPalavras.push(novaPalavra.value);
-
   localStorage.setItem("novaPalavra", listaPalavras);
 
   sectionInputNovaPalavra.classList.remove("ativo");
   document.getElementById("home-IniciaJogo").style.display = "none";
 
-  bancoDePalavras.innerHTML = getItensToString();
+  bancoDePalavras.innerHTML = itensBancoPalavras();
 }
 
 const recuperaPalavra = localStorage.getItem("novaPalavra");
 
-function getItensToString() {
+function itensBancoPalavras() {
   var result = "";
 
   for (i = 0; i < listaPalavras.length; i++) {
