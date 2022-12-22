@@ -1,0 +1,25 @@
+.caixaAdicionarPalavra.ativo{
+    display: none;
+}
+
+.caixaAdicionarPalavra{
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--bg-caixaAdicionaPalavra);
+
+
+    border-radius: 50%;
+
+    margin: 0 auto;
+}
+
+ .inputNovaPalvra{
+    background-color: transparent;
+    color: #FFF;
+
+    margin: 1rem;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+}

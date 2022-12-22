@@ -57,8 +57,11 @@ function adicionarLetraIncorreta() {
 }
 
 function iniciarJogo() {
-  document.getElementById("temporario").style.display = "none";
+
+  document.getElementById("home-IniciaJogo").style.display = "none";
   canvas.classList.remove("ativo");
+  
+
 
   sorteiaPalavras();
   desenharCanvas();

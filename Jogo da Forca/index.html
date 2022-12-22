@@ -9,6 +9,7 @@
     <meta name="description" content="">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/caixaAdicionaPalavra.css">
 
     <!-- <link rel="shortcut icon" href="img/mail-encryption-interface-symbol-of-an-envelope-back-with-a-padlock_icon-icons.com_56509.ico" type="image/x-icon"> -->
 
@@ -49,27 +50,28 @@
 
     </div>
 
-    <section class="endpage">
+    <section class="botoes__conteudo ativo" id="home-IniciaJogo">
 
-        <div class="botoes" id="temporario">
+        <div class="botoes" id="botoesIniciaJogo">
 
-            <button class="btn1" value="iniciar jogo" id="iniciarJogo" onclick="iniciarJogo()">Começar a jogar</button>
+            <button class="btn__iniciarJogo" value="iniciar jogo"  onclick="iniciarJogo()">Começar
+                a jogar</button>
 
-            <button class="btn2" onclick="adicionaPalavra()" data-inicio-addPalavra><a href="#">Adicionar nova palavra</a></button>
-
-        </div>
-
-        <div class="inputNovaPalavra">
-
-            <input type="text" onkeyup="this.value = this.value.toUpperCase()" data-input-novaPalavra>
+            <button class="btn__adicionarPalavra" onclick="adicionaPalavra()" data-inicio-addPalavra><a
+                    href="#">Adicionar nova palavra</a></button>
 
         </div>
+
 
 
     </section>
 
+    <section class="caixaAdicionarPalavra ativo" id="sectionInputNovaPalavra">
 
+            <input type="text" class="inputNovaPalvra" onkeyup="this.value = this.value.toUpperCase()"
+                data-input-novaPalavra>
 
+    </section>
 
     <script type="text/javascript" src="assets/js/script.js"></script>
     <script type="text/javascript" src="assets/js/canvas.js"></script>

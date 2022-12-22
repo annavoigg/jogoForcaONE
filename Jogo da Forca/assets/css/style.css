@@ -9,6 +9,9 @@
 
     --botao2-fundo: hsl(199, 94%, 80%);
     --botao2-letra: hsl(218, 48%, 36%);
+
+    --font-caixaAdicionaPalavra: hsl(0, 0%, 100%);
+    --bg-caixaAdicionaPalavra: rgba(41, 138, 155, 0.363);
     
 }
 
@@ -26,10 +29,7 @@
 body{
     padding-left: 3rem;
     background-color: var(--background-color);
-<<<<<<< HEAD
 
-=======
->>>>>>> b94bf8596e2c6855f0fd41aa474288d4599172ad
     background-image: url(../img/bg-inicial.gif);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -56,27 +56,16 @@ body{
     display: none;
 }
 
-.inputRandom{
-
-    margin-top: -20rem;
-    margin-right: -20rem;
-}
-
-
-.final{
-    margin-top: -6rem;
-}
-
 .botoes{
 
     padding: 5rem;
 }
 
-.btn1 a, .btn2 a{
+.btn__iniciarJogo a, .btn__adicionarPalavra a{
     color: inherit;
 }
 
-.btn1, .btn2{
+.btn__iniciarJogo, .btn__adicionarPalavra{
     display: block;
     width: 15rem;
     height: 56px;
@@ -89,23 +78,23 @@ body{
     
 }
 
-.btn1{
+.btn__iniciarJogo{
     color: var(--botao1-letra);
     background-color: var(--botao1-fundo);
 }
 
-.btn2{
+.btn__adicionarPalavra{
     margin-top: 2rem;
     color: var(--botao2-letra);
     background-color: var(--botao2-fundo);
 }
 
-.btn1, .btn2{
+.btn__iniciarJogo, .btn__adicionarPalavra{
     border: 1px solid var(--botao-criptografar);
 
 }
 
-.btn1:hover, .btn2:hover{
+.btn__iniciarJogo:hover, .btn__adicionarPalavra:hover{
     opacity: 50%;
 }
 
