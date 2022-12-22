@@ -6,6 +6,7 @@ let sectionInputNovaPalavra = document.getElementById(
   "sectionInputNovaPalavra"
 );
 
+
 function adicionaPalavra() {
   listaPalavras.push(novaPalavra.value);
 

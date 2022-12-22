@@ -3,7 +3,7 @@
 }
 
 .caixaAdicionarPalavra{
-    width: 20rem;
+    width: 22rem;
     height: 5rem;
     background-color: var(--bg-caixaAdicionaPalavra);
 
@@ -23,6 +23,3 @@
 
 }
 
-.palavrasAdicionadas.ativo{
-    display: none;
-}
