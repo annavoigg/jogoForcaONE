@@ -1,85 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/caixaAdicionaPalavra.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/caixaAdicionaPalavra.css" />
 
     <!-- <link rel="shortcut icon" href="img/mail-encryption-interface-symbol-of-an-envelope-back-with-a-padlock_icon-icons.com_56509.ico" type="image/x-icon"> -->
 
-    <script src="https://kit.fontawesome.com/3f3c4f089d.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/3f3c4f089d.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>Jogo da Forca</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <section class="inicio">
-
-        <header>
-
-            <div class="navbar">
-
-                <div class="logo">
-
-                    <img src="assets/img/logo.png" alt="">
-
-                </div>
-
-
-            </div>
-
-        </header>
-
+      <header>
+        <div class="navbar">
+          <div class="logo">
+            <img src="assets/img/logo.png" alt="" />
+          </div>
+        </div>
+      </header>
     </section>
 
     <div class="principal">
-
-        <div class="forca ativo" id="canvas">
-
-            <canvas class="forcaItem" id="forca" width="1200px" height="450px"></canvas>
-
-        </div>
-
-
+      <div class="forca ativo" id="canvas">
+        <canvas
+          class="forcaItem"
+          id="forca"
+          width="1200px"
+          height="450px"
+        ></canvas>
+      </div>
     </div>
 
     <section class="botoes__conteudo ativo" id="home-IniciaJogo">
+      <div class="botoes" id="botoesIniciaJogo">
+        <button
+          class="btn__iniciarJogo"
+          value="iniciar jogo"
+          onclick="iniciarJogo()"
+        >
+          Começar a jogar
+        </button>
 
-        <div class="botoes" id="botoesIniciaJogo">
-
-            <button class="btn__iniciarJogo" value="iniciar jogo"  onclick="iniciarJogo()">Começar
-                a jogar</button>
-
-            <button class="btn__adicionarPalavra" onclick="adicionaPalavra()" data-inicio-addPalavra><a
-                    href="#">Adicionar nova palavra</a></button>
-
-        </div>
-
-
-
+        <button
+          class="btn__adicionarPalavra"
+          onclick="adicionaPalavra()"
+          data-inicio-addPalavra
+        >
+          <a href="#">Adicionar nova palavra</a>
+        </button>
+      </div>
     </section>
 
     <section class="caixaAdicionarPalavra ativo" id="sectionInputNovaPalavra">
+      <input
+        type="text"
+        class="inputNovaPalvra"
+        maxlength="10"
+        placeholder="Insira uma nova palavra."
+        onkeyup="this.value = this.value.toUpperCase()"
+        data-input-novaPalavra
+      />
 
-            <input type="text" class="inputNovaPalvra" maxlength="10" placeholder="Insira uma nova palavra." onkeyup="this.value = this.value.toUpperCase()"
-                data-input-novaPalavra>
+      <button class="btn__enviaPalavra" data-addPalavras-botao>OK</button>
+
 
     </section>
 
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <section class="palavrasAdicionadas ativo" >
+        <textarea
+          name="bancoDePalavras"
+          id="bancoDePalavras"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </section>
+
+    <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="assets/js/canvas.js"></script>
     <script type="text/javascript" src="assets/js/desenhaCorpo.js"></script>
     <script type="text/javascript" src="assets/js/desenhaTracinhos.js"></script>
     <script type="text/javascript" src="assets/js/desenhaLetras.js"></script>
-    <script type="text/javascript" src="assets/js/adicionaNovaPalavra.js"></script>
-
-</body>
-
+    <script
+      type="text/javascript"
+      src="assets/js/adicionaNovaPalavra.js"
+    ></script>
+    <script type="text/javascript" src="assets/js/bancoDePalavras.js"></script>
+  </body>
 </html>

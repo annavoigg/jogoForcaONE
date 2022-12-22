@@ -3,7 +3,7 @@
 }
 
 .caixaAdicionarPalavra{
-    width: 25rem;
+    width: 20rem;
     height: 5rem;
     background-color: var(--bg-caixaAdicionaPalavra);
 
@@ -21,4 +21,8 @@
     font-size: 1.5rem;
     font-weight: 500;
 
+}
+
+.palavrasAdicionadas.ativo{
+    display: none;
 }
