@@ -4,8 +4,9 @@ let novaPalavra = document.querySelector("[data-input-novaPalavra]");
 
 let sectionInputNovaPalavra = document.getElementById(
   "sectionInputNovaPalavra"
-);
-
+  );
+  
+const recuperaPalavra = localStorage.getItem("novaPalavra");
 
 function adicionaPalavra() {
   localStorage.setItem("novaPalavra", listaPalavras);
@@ -13,18 +14,6 @@ function adicionaPalavra() {
   sectionInputNovaPalavra.classList.remove("ativo");
   document.getElementById("home-IniciaJogo").style.display = "none";
 
-  bancoDePalavras.innerHTML = itensBancoPalavras();
+  bancoDePalavras.innerHTML = recuperaPalavra.replaceAll(",", "\n");
 }
 
-const recuperaPalavra = localStorage.getItem("novaPalavra");
-
-function itensBancoPalavras() {
-  var result = "";
-
-  for (i = 0; i < listaPalavras.length; i++) {
-    result = result + listaPalavras[i] + "\r\n";
-  }
-  return result;
-}
-
-console.log(listaPalavras);
