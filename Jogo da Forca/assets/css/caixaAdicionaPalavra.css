@@ -3,12 +3,11 @@
 }
 
 .caixaAdicionarPalavra{
-    width: 5rem;
+    width: 25rem;
     height: 5rem;
     background-color: var(--bg-caixaAdicionaPalavra);
 
-
-    border-radius: 50%;
+    border-radius: 1rem;
 
     margin: 0 auto;
 }
@@ -17,9 +16,9 @@
     background-color: transparent;
     color: #FFF;
 
-    margin: 1rem;
+    margin: 1.5rem;
 
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 500;
 
 }
