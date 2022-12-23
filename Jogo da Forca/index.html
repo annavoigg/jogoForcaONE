@@ -48,10 +48,14 @@
     </section>
 
     <section class="caixaAdicionarPalavra ativo" id="sectionInputNovaPalavra">
-        <input type="text" class="inputNovaPalvra" maxlength="10" placeholder="Insira uma nova palavra."
-            onkeyup="this.value = this.value.toUpperCase()" data-input-novaPalavra />
+        <div class="enviarPalavra">
+            
+            <input type="text" class="inputNovaPalavra__enviarPalavra" maxlength="10" placeholder="Insira uma nova palavra."
+                onkeyup="this.value = this.value.toUpperCase()" data-input-novaPalavra />
+    
+            <button class="btn__enviarPalavra" onclick="adicionaBancoPalavra()" data-addPalavras-botao>OK</button>
 
-        <button class="btn__enviaPalavra" onclick="adicionaBancoPalavra()" data-addPalavras-botao>OK</button>
+        </div>
 
         <section class="palavrasAdicionadas">
             <label>Banco de Palavras

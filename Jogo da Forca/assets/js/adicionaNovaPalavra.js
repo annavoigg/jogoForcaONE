@@ -6,10 +6,10 @@ let sectionInputNovaPalavra = document.getElementById(
   "sectionInputNovaPalavra"
   );
   
-const recuperaPalavra = localStorage.getItem("novaPalavra");
+let recuperaPalavra = localStorage.getItem("novaPalavra");
 
 function adicionaPalavra() {
-  localStorage.setItem("novaPalavra", listaPalavras);
+  // localStorage.setItem("novaPalavra", listaPalavras);
 
   sectionInputNovaPalavra.classList.remove("ativo");
   document.getElementById("home-IniciaJogo").style.display = "none";

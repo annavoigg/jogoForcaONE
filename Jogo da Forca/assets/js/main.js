@@ -8,7 +8,7 @@ let listaPalavras = [
   "CORDA",
   "CARIMBO",
   "FERRO",
-  "CORPE",
+  "CORPO",
   "PEDRA",
   "FOGO",
   "AR",
