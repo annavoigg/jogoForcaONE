@@ -5,9 +5,10 @@ let novaPalavra = document.querySelector("[data-input-novaPalavra]");
 let sectionInputNovaPalavra = document.getElementById(
   "sectionInputNovaPalavra"
   );
-  
-let recuperaPalavra = localStorage.getItem("novaPalavra");
 
+let recuperaPalavra = localStorage.getItem("listaPalavras");
+
+// Primeiro Botão - muda a página
 function adicionaPalavra() {
   // localStorage.setItem("novaPalavra", listaPalavras);
 
@@ -16,4 +17,3 @@ function adicionaPalavra() {
 
   bancoDePalavras.innerHTML = recuperaPalavra.replaceAll(",", "\n");
 }
-

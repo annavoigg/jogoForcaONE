@@ -1,6 +1,20 @@
+function recuperaNovasPalavras() {
+  let id = localStorage.getItem('id');
+
+  for (i = 0; i <= id; i++) {
+    let palavra = localStorage.getItem(i);
+    if (palavra == null) {
+      continue;
+    }
+    listaPalavras.push(palavra);
+  }
+}
+
 // seletores
 
 let tabuleiro = document.getElementById("forca").getContext("2d");
+
+// Sprid Oparator
 
 let listaPalavras = [
   "PARQUE",
@@ -17,6 +31,10 @@ let listaPalavras = [
   "JOGOS",
   "BOLA",
 ];
+
+recuperaNovasPalavras();
+
+localStorage.setItem("listaPalavras", listaPalavras);
 
 let palavraSecreta = "";
 let letras = [];
@@ -60,7 +78,7 @@ function iniciarJogo() {
 
   document.getElementById("home-IniciaJogo").style.display = "none";
   canvas.classList.remove("ativo");
-  
+
 
 
   sorteiaPalavras();

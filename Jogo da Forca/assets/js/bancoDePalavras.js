@@ -4,14 +4,29 @@ let bancoDePalavras = document.getElementById("bancoDePalavras");
 
 let bancoPronto = [];
 
+// botão OK
 function adicionaBancoPalavra() {
 
     listaPalavras.push(novaPalavra.value);
+    
+    let id = proximoId();
 
-    localStorage.setItem("novaPalavra", listaPalavras);
+    localStorage.setItem("id", id);
+    localStorage.setItem(id, novaPalavra.value);
 
     bancoDePalavras.innerHTML = recuperaPalavra.replaceAll(",", "\n");
-    // return localStorage.value;
+
+    location.reload();
 }
 
+function proximoId() {
 
+    let proximoId = localStorage.getItem("id");
+
+    if(proximoId == null){
+        proximoId = 0;
+    }
+
+    return parseInt(proximoId)+1;
+
+}
