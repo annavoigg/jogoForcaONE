@@ -1,3 +1,4 @@
+
 function recuperaNovasPalavras() {
   let id = localStorage.getItem('id');
 
