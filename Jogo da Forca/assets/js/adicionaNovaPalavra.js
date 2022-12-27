@@ -4,7 +4,7 @@ let novaPalavra = document.querySelector("[data-input-novaPalavra]");
 
 let sectionInputNovaPalavra = document.getElementById(
   "sectionInputNovaPalavra"
-  );
+);
 
 let recuperaPalavra = localStorage.getItem("listaPalavras");
 
@@ -17,6 +17,6 @@ function adicionaPalavra() {
   document.getElementById("home-IniciaJogo").style.display = "none";
 
   bancoDePalavras.innerHTML = recuperaPalavra.replaceAll(",", "\n");
-
 }
+
 
