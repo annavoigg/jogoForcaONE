@@ -2,13 +2,16 @@
 
 :root{
 
-    --alert-color: hsl(210, 9%, 31%);
+    --barra-de-rolagem-listaPalavras: hsl(218, 82%, 47%);
 
-    --botao1-fundo: hsl(218, 48%, 36%);
+    --botao1-fundo: hsl(218, 52%, 50%);
     --botao1-letra: hsl(199, 94%, 80%);
 
     --botao2-fundo: hsl(199, 94%, 80%);
     --botao2-letra: hsl(218, 48%, 36%);
+
+    --font-caixaAdicionaPalavra: hsl(0, 0%, 100%);
+    --bg-caixaAdicionaPalavra: rgba(41, 138, 155, 0.363);
     
 }
 
@@ -25,59 +28,39 @@
 
 body{
     padding-left: 3rem;
+    background-color: var(--background-color);
+
     background-image: url(../img/bg-inicial.gif);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position-y: -9rem ;
+    background-position-y: -6rem ;
 
     overflow-y: hidden;
 }
 
-.home nav img{
-    padding-top: 2rem;
-
-    height: 4.5rem;
-}
-
-
 .principal{
-    text-align: center;
+    display: flex;
 }
 
-.palavra .palavraInicial{
-    font-size: 1.5rem;
-    color: #ffff;
-
-    background: transparent;
-
-    resize: none;
+.forca{
+    position: relative;
 }
 
-.conteudo{
-    text-align: center;
-}
-
-.alerta{
-    align-items: center;
-    margin-left: -20rem;
-    margin-top: 3rem;
-}
-
-.alerta .descAlerta{
-    margin-left: .5rem;
+.forca.ativo{
+    display: none;
 }
 
 .botoes{
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-} 
 
-.btn1 a, .btn2 a{
+    padding: 5rem;
+}
+
+.btn__iniciarJogo a, .btn__adicionarPalavra a{
     color: inherit;
 }
 
-.btn1, .btn2{
+.btn__iniciarJogo, .btn__adicionarPalavra{
+    display: block;
     width: 15rem;
     height: 56px;
 
@@ -85,20 +68,27 @@ body{
 
     cursor: pointer;
 
-    margin-top: .50rem;
-
+    margin: 0 auto;
+    
 }
 
-.btn1{
+.btn__iniciarJogo{
     color: var(--botao1-letra);
     background-color: var(--botao1-fundo);
 }
 
-.btn2{
+.btn__adicionarPalavra{
+    margin-top: 2rem;
     color: var(--botao2-letra);
     background-color: var(--botao2-fundo);
 }
 
-.btn1:hover, .btn2:hover{
+.btn__iniciarJogo, .btn__adicionarPalavra{
+    border: 1px solid var(--botao-criptografar);
+
+}
+
+.btn__iniciarJogo:hover, .btn__adicionarPalavra:hover{
     opacity: 50%;
 }
+

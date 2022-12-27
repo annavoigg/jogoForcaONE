@@ -1,0 +1,31 @@
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--barra-de-rolagem-listaPalavras);
+    border-radius: 20px;
+}
+
+
+.palavrasAdicionadas{
+    text-align: center;    
+
+    padding: 3rem;
+}
+
+.palavrasAdicionadas__titulo{
+    display: none;
+}
+
+.palavrasAdicionadas__lista{
+    background-color: transparent;
+    color: #FFF;
+
+    text-align: center;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    resize: none;
+}

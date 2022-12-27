@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+    
+    --botao-fundo: hsl(199, 94%, 80%);
+    --botao-letra: hsl(218, 48%, 36%);
+    
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+body{
+    padding-left: 3rem;
+    background-color: var(--background-color);
+
+    background-image: url(../img/bg-inicial.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: -6rem ;
+
+    overflow-y: hidden;
+}
+
+.header .navbar img{
+    padding-top: 2rem;
+
+    height: 4.5rem;
+}
+
+.principal{
+    text-align: center;
+}
+
+.principal__check-icon{
+    width: 10rem;
+}
+
+.principal__legenda, .principal__legenda2{
+    color: #FFF;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.opcoes__botao-inicio{
+    display: block;
+    width: 15rem;
+    height: 56px;
+
+    border-radius: 1rem;
+    
+    margin: 2rem auto;
+    
+    cursor: pointer;
+
+}
+
+.opcoes__botao-inicio{
+    background-color: var(--botao-fundo);
+    color: var(--botao-letra);
+}
+
+.opcoes__botao-inicio:hover{
+    opacity: 50%;
+}

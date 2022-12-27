@@ -8,10 +8,10 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
 
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
     <link rel="stylesheet" href="assets/css/caixaAdicionaPalavra.css" />
-
-    <!-- <link rel="shortcut icon" href="img/mail-encryption-interface-symbol-of-an-envelope-back-with-a-padlock_icon-icons.com_56509.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" href="assets/css/listaDePalavras.css" />
 
     <script src="https://kit.fontawesome.com/3f3c4f089d.js" crossorigin="anonymous"></script>
 
@@ -19,14 +19,12 @@
 </head>
 
 <body>
-    <section class="inicio">
-        <header>
+    <section class="header">
             <div class="navbar">
                 <div class="logo">
-                    <img src="assets/img/logo.png" alt="" />
+                    <img src="assets/img/logo.png" alt="Logo Alura"/>
                 </div>
             </div>
-        </header>
     </section>
 
     <div class="principal">
@@ -48,23 +46,25 @@
     </section>
 
     <section class="caixaAdicionarPalavra ativo" id="sectionInputNovaPalavra">
+        
         <div class="enviarPalavra">
             
-            <input type="text" class="inputNovaPalavra__enviarPalavra" maxlength="10" placeholder="Insira uma nova palavra."
+            <input type="text" class="enviarPalavra__input" maxlength="10" placeholder="Insira uma nova palavra."
                 onkeyup="this.value = this.value.toUpperCase()" data-input-novaPalavra />
     
-            <button class="btn__enviarPalavra" onclick="adicionaBancoPalavra()" data-addPalavras-botao>OK</button>
+            <button class="enviarPalavra__btn-enviarPalavra" onclick="adicionaBancoPalavra()" data-addPalavras-botao>OK</button>
 
         </div>
 
-        <section class="palavrasAdicionadas">
-            <label>Banco de Palavras
-                <textarea name="bancoDePalavras" id="bancoDePalavras" cols="30" rows="10">
-                </textarea>
-            </label>
-        </section>
     </section>
 
+    <section class="palavrasAdicionadas">
+        <label for="bancoDePalavras" class="palavrasAdicionadas__titulo">Sua lista</label>
+            <textarea name="bancoDePalavras" class="palavrasAdicionadas__lista" id="bancoDePalavras" cols="40" rows="7">
+            </textarea>
+
+    </section>
+    
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="assets/js/canvas.js"></script>
     <script type="text/javascript" src="assets/js/desenhaCorpo.js"></script>

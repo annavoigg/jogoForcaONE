@@ -16,7 +16,7 @@ function adicionaBancoPalavra() {
 
     bancoDePalavras.innerHTML = recuperaPalavra.replaceAll(",", "\n");
 
-    location.reload();
+    window.location.href = 'palavraAdicionadaSucesso.html'
 }
 
 function proximoId() {
