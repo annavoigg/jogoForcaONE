@@ -12,6 +12,7 @@ function adicionaBancoPalavra() {
   } else {
     window.location.href = "palavraAdicionadaSucesso.html";
   }
+
   listaPalavras.push(novaPalavra.value);
 
   let id = proximoId();
@@ -21,6 +22,9 @@ function adicionaBancoPalavra() {
 
   bancoDePalavras.innerHTML = recuperaPalavra.replaceAll(",", "\n");
 }
+
+
+
 
 function proximoId() {
   let proximoId = localStorage.getItem("id");
