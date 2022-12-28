@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,82 +11,154 @@
     <link rel="stylesheet" href="assets/css/navbar.css" />
     <link rel="stylesheet" href="assets/css/caixaAdicionaPalavra.css" />
     <link rel="stylesheet" href="assets/css/listaDePalavras.css" />
-    <link rel="stylesheet" href="assets/css/perdeu.css" />
+    <link rel="stylesheet" href="assets/css/perdeOuGanha.css" />
 
-    <script src="https://kit.fontawesome.com/3f3c4f089d.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./assets/img/forca-icone.ico" type="image/x-icon">
 
+    <script
+      src="https://kit.fontawesome.com/3f3c4f089d.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Jogo da Forca</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <section class="header">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="assets/img/logo.png" alt="Logo Alura"/>
-                </div>
-            </div>
+      <div class="navbar">
+        <div class="logo">
+          <img src="assets/img/logo.png" alt="Logo Alura" />
+        </div>
+      </div>
     </section>
 
     <div class="principal">
-        <div class="forca ativo" id="canvas">
-            <canvas class="forcaItem" id="forca" width="1200px" height="450px"></canvas>
-        </div>
+      <div class="forca ativo" id="canvas">
+        <canvas
+          class="forcaItem"
+          id="forca"
+          width="1200px"
+          height="450px"
+        ></canvas>
+      </div>
     </div>
 
     <section class="botoes__conteudo ativo" id="home-IniciaJogo">
-        <div class="botoes" id="botoesIniciaJogo">
-            <button class="btn__iniciarJogo" value="iniciar jogo" onclick="iniciarJogo()">
-                Começar a jogar
-            </button>
+      <div class="botoes" id="botoesIniciaJogo">
+        <button
+          class="btn__iniciarJogo"
+          value="iniciar jogo"
+          onclick="iniciarJogo()"
+        >
+          Começar a jogar
+        </button>
 
-            <button class="btn__adicionarPalavra" onclick="adicionaPalavra()" data-inicio-addPalavra>
-                Adicionar nova palavra
-            </button>
-        </div>
+        <button
+          class="btn__adicionarPalavra"
+          onclick="adicionaPalavra()"
+          data-inicio-addPalavra
+        >
+          Adicionar nova palavra
+        </button>
+      </div>
     </section>
 
-    <section class="modalPerdeu">
+    <section class="modalFim__derrota">
+      <div id="fadeDerrota" class="hide__derrota"></div>
 
-        <div id="fade" class="hide"></div>
+      <div id="modalDerrota" class="hide__derrota">
+        <img
+          src="./assets/img/perdeu.png"
+          alt="Imagem de Wasted usada no GTA para indicar falha na missão."
+        />
 
-        <div id="modal" class="hide">
+        <button
+          id="close-modal"
+          class="modal__voltaInicioDerrota"
+          onclick="voltarInicio()"
+        >
+          Novo Jogo
+        </button>
+      </div>
+    </section>
 
-            <img src="./assets/img/perdeu.png" alt="Imagem de Wasted usada no GTA para indicar falha na missão.">
+    <section class="modalFim__vitoria">
+      <div id="fadeVitoria" class="hide__vitoria"></div>
 
-            <button id="close-modal" class="modal__voltaInicio" onclick="voltarInicio()">Novo Jogo</button>
+      <div id="modalVitoria" class="hide__vitoria">
+        <img
+          src="./assets/img/ganhou.png"
+          alt="Imagem de Wasted usada no GTA para indicar sucesso na missão."
+        />
 
-        </div>
-
+        <button
+          id="close-modal-vitoria"
+          class="modal__voltaInicioVitoria"
+          onclick="voltarInicio()"
+        >
+          Novo Jogo
+        </button>
+      </div>
     </section>
 
     <section class="caixaAdicionarPalavra ativo" id="sectionInputNovaPalavra">
+      <div class="enviarPalavra">
+        <input
+          type="text"
+          class="enviarPalavra__input"
+          maxlength="10"
+          placeholder="Insira uma nova palavra."
+          onkeyup="this.value = this.value.toUpperCase()"
+          data-input-novaPalavra
+        />
+
+        <button
+          class="enviarPalavra__btn-enviarPalavra"
+          onclick="adicionaBancoPalavra()"
+          data-addPalavras-botao
+        >
+          OK
+        </button>
         
-        <div class="enviarPalavra">
-            
-            <input type="text" class="enviarPalavra__input" maxlength="10" placeholder="Insira uma nova palavra."
-                onkeyup="this.value = this.value.toUpperCase()" data-input-novaPalavra />
-    
-            <button class="enviarPalavra__btn-enviarPalavra" onclick="adicionaBancoPalavra()" data-addPalavras-botao>OK</button>
+      </div>
 
-        </div>
+      <div class="botaoVoltar">
+        <button class="btnVoltar__lista" onclick="voltarInicio()"><i class="fa-solid fa-arrow-left"></i></button>
+      </div>
+
+
+      <section class="palavrasAdicionadas">
+
+        
+
+        <label for="bancoDePalavras" class="palavrasAdicionadas__titulo"
+          >Sua lista</label
+        >
+        <textarea
+          name="bancoDePalavras"
+          class="palavrasAdicionadas__lista"
+          id="bancoDePalavras"
+          cols="40"
+          rows="7"
+          readonly
+        >
+        </textarea>      
+
+      
+      </section>
+
 
     </section>
 
-    <section class="palavrasAdicionadas">
-        <label for="bancoDePalavras" class="palavrasAdicionadas__titulo">Sua lista</label>
-            <textarea name="bancoDePalavras" class="palavrasAdicionadas__lista" id="bancoDePalavras" cols="40" rows="7" readonly> 
-            </textarea>
-
-    </section>
-    
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="assets/js/canvas.js"></script>
     <script type="text/javascript" src="assets/js/desenhaCorpo.js"></script>
     <script type="text/javascript" src="assets/js/desenhaTracinhos.js"></script>
     <script type="text/javascript" src="assets/js/desenhaLetras.js"></script>
-    <script type="text/javascript" src="assets/js/adicionaNovaPalavra.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/js/adicionaNovaPalavra.js"
+    ></script>
     <script type="text/javascript" src="assets/js/bancoDePalavras.js"></script>
     <script src="assets/js/perdeOuGanha.js"></script>
-</body>
-
+  </body>
 </html>

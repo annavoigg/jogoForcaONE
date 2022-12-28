@@ -1,9 +1,13 @@
-const botaoNovoJogo = document.getElementById("close-modal");
-const modal = document.getElementById("modal");
-const fade = document.getElementById("fade");
+const botaoNovoJogo = document.querySelector(".modal__voltaInicio")
 
-const toggleModal = () => {
-    [modal, fade].forEach((el) => el.classList.toggle("hide"));
+const modalDerrota = document.getElementById("modalDerrota");
+const fadeDerrota = document.getElementById("fadeDerrota");
+
+const modalVitoria = document.getElementById("modalVitoria");
+const fadeVitoria = document.getElementById("fadeVitoria");
+
+const disparaDerrota = () => {
+    [modalDerrota, fadeDerrota].forEach((el) => el.classList.toggle("hide__derrota"));
 
     document.onkeydown = (e) =>{
         e.preventDefault();
@@ -15,9 +19,14 @@ function voltarInicio(){
     window.location.href = 'index.html'
 }
 
-function vitoriaJogo() {
+function disparaVitoria() {
 
     if (letrasCorretas.length == palavraSecreta.length) {
-      alert("Vitória porra!");
+        [modalVitoria, fadeVitoria].forEach((el) => el.classList.toggle("hide__vitoria"));
+
+        document.onkeydown = (e) =>{
+            e.preventDefault();
+            return
+        }
     }
   }

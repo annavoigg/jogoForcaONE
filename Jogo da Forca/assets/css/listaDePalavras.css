@@ -1,31 +1,49 @@
 *::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--barra-de-rolagem-listaPalavras);
-    border-radius: 20px;
+  background-color: var(--barra-de-rolagem-listaPalavras);
+  border-radius: 20px;
 }
 
+.palavrasAdicionadas {
+  text-align: center;
 
-.palavrasAdicionadas{
-    text-align: center;    
-
-    padding: 3rem;
+  padding: 3rem;
 }
 
-.palavrasAdicionadas__titulo{
-    display: none;
+.palavrasAdicionadas__titulo {
+  display: none;
 }
 
-.palavrasAdicionadas__lista{
-    background-color: transparent;
-    color: #FFF;
+.palavrasAdicionadas__lista {
+  background-color: transparent;
+  color: #fff;
 
-    text-align: center;
+  text-align: center;
 
-    font-size: 1.2rem;
-    font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 600;
 
-    resize: none;
+  resize: none;
 }
+
+.btnVoltar__lista{
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+
+  border-radius: 1rem;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  margin-top: 20rem;
+  margin-left: -2rem;
+
+  cursor: pointer;
+
+  opacity: 50%;
+}
+

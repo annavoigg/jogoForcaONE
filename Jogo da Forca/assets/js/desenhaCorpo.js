@@ -36,7 +36,7 @@ function desenhaCorpo(erros) {
     tabuleiro.stroke();
     tabuleiro.closePath();
   } else {
-    toggleModal();
+    disparaDerrota();
   } 
   
 } 

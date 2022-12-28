@@ -1,18 +1,8 @@
-function recuperaNovasPalavras() {
-  let id = localStorage.getItem("id");
-
-  for (i = 0; i <= id; i++) {
-    let palavra = localStorage.getItem(i);
-    if (palavra == null) {
-      continue;
-    }
-    listaPalavras.push(palavra);
-  }
-}
-
 // seletores
-
 let tabuleiro = document.getElementById("forca").getContext("2d");
+
+const arr = [1, 1, 2, 2, 3, 3, "teste", "teste"];
+
 
 // Sprid Oparator
 
@@ -39,12 +29,27 @@ localStorage.setItem("listaPalavras", listaPalavras);
 let palavraSecreta = "";
 let letras = [];
 
-//array teste
 let letrasCorretas = [];
+//evita letras repetidas
+const letrasCorretasUnicas = [...new Set(letrasCorretas)];
+
+console.log(letrasCorretasUnicas)
 
 let erros = 6;
 
 let canvas = document.getElementById("canvas");
+
+function recuperaNovasPalavras() {
+  let id = localStorage.getItem("id");
+
+  for (i = 0; i <= id; i++) {
+    let palavra = localStorage.getItem(i);
+    if (palavra == null) {
+      continue;
+    }
+    listaPalavras.push(palavra);
+  }
+}
 
 function sorteiaPalavras() {
   let palavra = listaPalavras[Math.floor(Math.random() * listaPalavras.length)];
@@ -61,14 +66,10 @@ function verificarLetra(key) {
     (key <= 90 && letras.indexOf(key))
   ) {
     letras.push(key);
-    console.log(key);
-    console.log(letras);
     return estado;
   } else {
     estado = true;
     letras.push(key);
-    console.log(key);
-    console.log(letras, "if true");
     return estado;
   }
 }
@@ -94,15 +95,10 @@ function iniciarJogo() {
       palavraSecreta.includes(letraDigitada)
     ) {
       for (let i = 0; i < palavraSecreta.length; i++) {
-
         if (palavraSecreta[i] === letraDigitada) {
           escreverLetraCorreta(i);
-
-          //enviando apenas as letras corretas para o array "letrasCorretas"
-          letrasCorretas.push(palavraSecreta[i])
-          console.log(letrasCorretas, "aqui ficam apenas as letras corretas");
+          letrasCorretas.push(palavraSecreta[i]);
         }
-
       }
     } else if (!checkChar(e)) {
       e.preventDefault();
@@ -112,14 +108,11 @@ function iniciarJogo() {
       escreverLetraIncorreta(letraDigitada, erros);
       desenhaCorpo(erros);
     }
-
-    
   };
 
   document.onkeyup = (e) => {
-    vitoriaJogo();
-  }
-  
+    disparaVitoria(e);
+  };
 }
 
 // captar a tecla digitada
@@ -133,5 +126,3 @@ function checkChar(e) {
     return true;
   }
 }
-
-

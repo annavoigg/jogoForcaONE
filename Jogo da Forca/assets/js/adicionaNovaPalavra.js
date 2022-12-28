@@ -11,12 +11,8 @@ let recuperaPalavra = localStorage.getItem("listaPalavras");
 // Primeiro Botão - muda a página
 
 function adicionaPalavra() {
-  // localStorage.setItem("novaPalavra", listaPalavras);
-
   sectionInputNovaPalavra.classList.remove("ativo");
   document.getElementById("home-IniciaJogo").style.display = "none";
 
   bancoDePalavras.innerHTML = recuperaPalavra.replaceAll(",", "\n");
 }
-
-

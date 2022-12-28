@@ -3,7 +3,7 @@ function desenhaTracinhos(){
     tabuleiro.lineCap = "round";
     tabuleiro.lineJoin = "round";
     tabuleiro.fillStyle = "white";
-    tabuleiro.strokeStyle = "#0A3871";
+    tabuleiro.strokeStyle = "white";
 
     let largura = 600/palavraSecreta.length;
 

@@ -1,96 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-:root{
+:root {
+  --barra-de-rolagem-listaPalavras: hsl(218, 82%, 47%);
 
-    --barra-de-rolagem-listaPalavras: hsl(218, 82%, 47%);
+  --botao1-fundo: hsl(218, 52%, 50%);
+  --botao1-letra: hsl(199, 94%, 80%);
 
-    --botao1-fundo: hsl(218, 52%, 50%);
-    --botao1-letra: hsl(199, 94%, 80%);
+  --botao2-fundo: hsl(199, 94%, 80%);
+  --botao2-letra: hsl(218, 48%, 36%);
 
-    --botao2-fundo: hsl(199, 94%, 80%);
-    --botao2-letra: hsl(218, 48%, 36%);
+  --font-caixaAdicionaPalavra: hsl(0, 0%, 100%);
+  --bg-caixaAdicionaPalavra: rgba(41, 138, 155, 0.363);
 
-    --font-caixaAdicionaPalavra: hsl(0, 0%, 100%);
-    --bg-caixaAdicionaPalavra: rgba(41, 138, 155, 0.363);
-
-    --bg-botao-modal: hsl(0, 100%, 42%);
-    
+  --bg-botao-modal-derrota: hsl(0, 100%, 42%);
+  --bg-botao-modal-vitoria: hsl(40, 100%, 50%);
 }
 
-*{
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    outline: none;
-    box-sizing: border-box;
-    border: none;
-    text-decoration: none;
-    transition: .2s linear;
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
 }
 
-body{
-    padding-left: 3rem;
-    background-color: var(--background-color);
+body {
+  padding-left: 3rem;
+  background-color: var(--background-color);
 
-    background-image: url(../img/bg-inicial.gif);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position-y: -6rem ;
+  background-image: url(../img/bg-inicial.gif);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: -6rem;
 
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
-.principal{
-    display: flex;
+.principal {
+  display: flex;
 }
 
-.forca{
-    position: relative;
+.forca {
+  position: relative;
 }
 
-.forca.ativo{
-    display: none;
+.forca.ativo {
+  display: none;
 }
 
-.botoes{
-
-    padding: 5rem;
+.botoes {
+  padding: 5rem;
 }
 
-.btn__iniciarJogo a, .btn__adicionarPalavra a{
-    color: inherit;
+.btn__iniciarJogo a,
+.btn__adicionarPalavra a {
+  color: inherit;
 }
 
-.btn__iniciarJogo, .btn__adicionarPalavra{
-    display: block;
-    width: 15rem;
-    height: 3.5rem;
+.btn__iniciarJogo,
+.btn__adicionarPalavra {
+  display: block;
+  width: 15rem;
+  height: 3.5rem;
 
-    border-radius: 1rem;
+  border-radius: 1rem;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    margin: 0 auto;
-    
+  margin: 0 auto;
 }
 
-.btn__iniciarJogo{
-    color: var(--botao1-letra);
-    background-color: var(--botao1-fundo);
+.btn__iniciarJogo {
+  color: var(--botao1-letra);
+  background-color: var(--botao1-fundo);
 }
 
-.btn__adicionarPalavra{
-    margin-top: 2rem;
-    color: var(--botao2-letra);
-    background-color: var(--botao2-fundo);
+.btn__adicionarPalavra {
+  margin-top: 2rem;
+  color: var(--botao2-letra);
+  background-color: var(--botao2-fundo);
 }
 
-.btn__iniciarJogo, .btn__adicionarPalavra{
-    border: 1px solid var(--botao-criptografar);
-
+.btn__iniciarJogo,
+.btn__adicionarPalavra {
+  border: 1px solid var(--botao-criptografar);
 }
 
-.btn__iniciarJogo:hover, .btn__adicionarPalavra:hover{
-    opacity: 50%;
+.btn__iniciarJogo:hover,
+.btn__adicionarPalavra:hover {
+  opacity: 50%;
 }
-

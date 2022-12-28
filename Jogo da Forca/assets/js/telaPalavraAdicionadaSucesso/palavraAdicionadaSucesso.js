@@ -1,4 +1,3 @@
-
-function voltarInicio(){
-    window.location.href = 'index.html';
+function voltarInicio() {
+  window.location.href = "index.html";
 }

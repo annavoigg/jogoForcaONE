@@ -1,8 +1,9 @@
-.modal__voltaInicio{
+.modal__voltaInicioDerrota,
+.modal__voltaInicioVitoria {
   width: 15rem;
   height: 3.5rem;
   padding: 0.6rem 1.2rem;
-  background-color: var(--bg-botao-modal);
+
   color: #fff;
   border: none;
   border-radius: 1rem;
@@ -14,18 +15,30 @@
   margin-top: 5rem;
 }
 
-.modal__voltaInicio:hover {
+.modal__voltaInicioDerrota {
+  background-color: var(--bg-botao-modal-derrota);
+}
+
+.modal__voltaInicioVitoria {
+  background-color: var(--bg-botao-modal-vitoria);
+}
+
+.modal__voltaInicioDerrota:hover,
+.modal__voltaInicioVitoria:hover {
   opacity: 1;
 }
 
-#fade,
-#modal {
+#fadeDerrota,
+#modalDerrota,
+#fadeVitoria,
+#modalVitoria {
   transition: 0.5s;
   opacity: 1;
   pointer-events: all;
 }
 
-#fade {
+#fadeDerrota,
+#fadeVitoria {
   position: fixed;
   top: 0;
   left: 0;
@@ -35,7 +48,8 @@
   z-index: 5;
 }
 
-#modal {
+#modalDerrota,
+#modalVitoria {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -48,12 +62,15 @@
   text-align: center;
 }
 
-#modal.hide,
-#fade.hide {
+#modalDerrota.hide__derrota,
+#fadeDerrota.hide__derrota,
+#modalVitoria.hide__vitoria,
+#fadeVitoria.hide__vitoria {
   opacity: 0;
   pointer-events: none;
 }
 
-#modal.hide {
+#modalDerrota.hide__derrota,
+#modalVitoria.hide__vitoria {
   top: 0;
 }
