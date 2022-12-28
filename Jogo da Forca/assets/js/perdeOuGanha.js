@@ -11,8 +11,13 @@ const toggleModal = () => {
     }
 };
 
-
-
 function voltarInicio(){
     window.location.href = 'index.html'
 }
+
+function vitoriaJogo() {
+
+    if (letrasCorretas.length == palavraSecreta.length) {
+      alert("Vitória porra!");
+    }
+  }

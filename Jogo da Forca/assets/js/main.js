@@ -94,14 +94,15 @@ function iniciarJogo() {
       palavraSecreta.includes(letraDigitada)
     ) {
       for (let i = 0; i < palavraSecreta.length; i++) {
+
         if (palavraSecreta[i] === letraDigitada) {
           escreverLetraCorreta(i);
 
           //enviando apenas as letras corretas para o array "letrasCorretas"
           letrasCorretas.push(palavraSecreta[i])
           console.log(letrasCorretas, "aqui ficam apenas as letras corretas");
-
         }
+
       }
     } else if (!checkChar(e)) {
       e.preventDefault();
@@ -111,9 +112,15 @@ function iniciarJogo() {
       escreverLetraIncorreta(letraDigitada, erros);
       desenhaCorpo(erros);
     }
-  };
-}
 
+    
+  };
+
+  document.onkeyup = (e) => {
+    vitoriaJogo();
+  }
+  
+}
 
 // captar a tecla digitada
 
@@ -126,3 +133,5 @@ function checkChar(e) {
     return true;
   }
 }
+
+
