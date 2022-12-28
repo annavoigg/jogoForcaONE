@@ -99,7 +99,7 @@ function iniciarJogo() {
 
           //enviando apenas as letras corretas para o array "letrasCorretas"
           letrasCorretas.push(palavraSecreta[i])
-          console.log(letrasCorretas, "aqui");
+          console.log(letrasCorretas, "aqui ficam apenas as letras corretas");
 
         }
       }

@@ -19,5 +19,3 @@ function escreverLetraIncorreta(letraDigitada, erros) {
 
   tabuleiro.fillText(letraDigitada, 465 + 40 * (10 - erros), 65, 50);
 }
-
-// if (palavraSecreta.length == letraDigitada)
