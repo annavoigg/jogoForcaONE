@@ -12,6 +12,8 @@
 
     --font-caixaAdicionaPalavra: hsl(0, 0%, 100%);
     --bg-caixaAdicionaPalavra: rgba(41, 138, 155, 0.363);
+
+    --bg-botao-modal: hsl(0, 100%, 42%);
     
 }
 
@@ -62,7 +64,7 @@ body{
 .btn__iniciarJogo, .btn__adicionarPalavra{
     display: block;
     width: 15rem;
-    height: 56px;
+    height: 3.5rem;
 
     border-radius: 1rem;
 

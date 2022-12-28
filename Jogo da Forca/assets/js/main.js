@@ -1,6 +1,5 @@
-
 function recuperaNovasPalavras() {
-  let id = localStorage.getItem('id');
+  let id = localStorage.getItem("id");
 
   for (i = 0; i <= id; i++) {
     let palavra = localStorage.getItem(i);
@@ -40,6 +39,9 @@ localStorage.setItem("listaPalavras", listaPalavras);
 let palavraSecreta = "";
 let letras = [];
 
+//array teste
+let letrasCorretas = [];
+
 let erros = 6;
 
 let canvas = document.getElementById("canvas");
@@ -76,11 +78,8 @@ function adicionarLetraIncorreta() {
 }
 
 function iniciarJogo() {
-
   document.getElementById("home-IniciaJogo").style.display = "none";
   canvas.classList.remove("ativo");
-
-
 
   sorteiaPalavras();
   desenharCanvas();
@@ -97,6 +96,11 @@ function iniciarJogo() {
       for (let i = 0; i < palavraSecreta.length; i++) {
         if (palavraSecreta[i] === letraDigitada) {
           escreverLetraCorreta(i);
+
+          //enviando apenas as letras corretas para o array "letrasCorretas"
+          letrasCorretas.push(palavraSecreta[i])
+          console.log(letrasCorretas, "aqui");
+
         }
       }
     } else if (!checkChar(e)) {
@@ -107,9 +111,9 @@ function iniciarJogo() {
       escreverLetraIncorreta(letraDigitada, erros);
       desenhaCorpo(erros);
     }
-
   };
 }
+
 
 // captar a tecla digitada
 
@@ -119,7 +123,6 @@ function checkChar(e) {
   const padrao = "[a-zA-Z]";
 
   if (char.match(padrao)) {
-    console.log(char);
     return true;
   }
 }

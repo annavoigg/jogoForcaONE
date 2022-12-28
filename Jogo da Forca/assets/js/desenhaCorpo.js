@@ -36,6 +36,7 @@ function desenhaCorpo(erros) {
     tabuleiro.stroke();
     tabuleiro.closePath();
   } else {
-    alert("acabou!")
-  }
-}
+    toggleModal();
+  } 
+  
+} 
