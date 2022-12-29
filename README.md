@@ -1,5 +1,5 @@
-
 # ☠ Jogo da Forca
+![Jogo da Forca (1)](https://user-images.githubusercontent.com/101142324/210006457-0d18ae55-1351-4bb4-9ca6-39ef1d6da140.png)
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 ## 👉 Índice 
