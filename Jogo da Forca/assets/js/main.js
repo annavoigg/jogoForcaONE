@@ -31,7 +31,7 @@ let letras = [];
 
 let letrasCorretas = [];
 //evita letras repetidas
-const letrasCorretasUnicas = [...new Set(letrasCorretas)];
+// const letrasCorretasUnicas = [...new Set(letrasCorretas)];
 
 console.log(letrasCorretasUnicas)
 
