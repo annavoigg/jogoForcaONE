@@ -33,8 +33,6 @@ let letrasCorretas = [];
 //evita letras repetidas
 // const letrasCorretasUnicas = [...new Set(letrasCorretas)];
 
-console.log(letrasCorretasUnicas)
-
 let erros = 6;
 
 let canvas = document.getElementById("canvas");
