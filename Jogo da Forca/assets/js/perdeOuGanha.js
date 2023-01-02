@@ -9,24 +9,44 @@ const fadeVitoria = document.getElementById("fadeVitoria");
 const disparaDerrota = () => {
     [modalDerrota, fadeDerrota].forEach((el) => el.classList.toggle("hide__derrota"));
 
-    document.onkeydown = (e) =>{
+    document.onkeydown = (e) => {
         e.preventDefault();
         return
     }
 };
 
-function voltarInicio(){
+function voltarInicio() {
     window.location.href = 'index.html'
 }
 
 function disparaVitoria() {
 
-    if (letrasCorretas.length == palavraSecreta.length) {
-        [modalVitoria, fadeVitoria].forEach((el) => el.classList.toggle("hide__vitoria"));
+    const resultado =
+        palavraSecreta.map(letra => {
+            return letrasCorretas.includes(letra);
+        })
 
-        document.onkeydown = (e) =>{
-            e.preventDefault();
-            return
-        }
+    // console.log(resultado);
+
+    if (!(resultado.includes(false))) {
+        [modalVitoria, fadeVitoria].forEach((el) => el.classList.toggle("hide__vitoria"));
     }
-  }
+
+    // if (resultado.includes(false)) {
+    //     console.log("Ainda não ganhou!");
+    // } else {
+    //     [modalVitoria, fadeVitoria].forEach((el) => el.classList.toggle("hide__vitoria"));
+    // }
+
+    //     for (let i = 0; i < palavraSecreta.length; i++) {
+    //     if (letrasCorretas[i] == palavraSecreta[i]) {
+    //         [modalVitoria, fadeVitoria].forEach((el) => el.classList.toggle("hide__vitoria"));
+
+    //         document.onkeydown = (e) =>{
+    //             e.preventDefault();
+    //             return;
+    //         }
+    //     }
+    // }
+
+}

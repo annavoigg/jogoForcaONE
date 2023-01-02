@@ -1,9 +1,6 @@
 // seletores
 let tabuleiro = document.getElementById("forca").getContext("2d");
 
-const arr = [1, 1, 2, 2, 3, 3, "teste", "teste"];
-
-
 // Sprid Oparator
 
 let listaPalavras = [
@@ -52,7 +49,8 @@ function recuperaNovasPalavras() {
 function sorteiaPalavras() {
   let palavra = listaPalavras[Math.floor(Math.random() * listaPalavras.length)];
 
-  palavraSecreta = palavra;
+  // Transforma string em ARRAY
+  palavraSecreta = [...palavra];
   return palavraSecreta;
 }
 

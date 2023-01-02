@@ -32,7 +32,7 @@ body {
   background-color: var(--background-color);
 
   background-image: url(../img/bg-inicial.gif);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -6rem;
 
@@ -92,4 +92,13 @@ body {
 .btn__iniciarJogo:hover,
 .btn__adicionarPalavra:hover {
   opacity: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    
+  
+}
+
+@media screen and (min-width: 1024px) {
+  
 }
