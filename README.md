@@ -32,7 +32,7 @@ Nesse projeto utilizamos HTML para estruturar o site, CSS para estilizar e JS pa
 
 ## ⚡ Execução
 
-Para conseguir jogar basta abrir o seguinte link: [https://github.com/GabiCmg/jogoForcaONE](https://github.com/GabiCmg/jogoForcaONE)
+Para conseguir jogar basta abrir o seguinte link: https://annavoigg.github.io/jogoForcaONE/
 
 Mas caso queira executar o projeto em sua própria máquina, uma das alternativas que surgerimos é baixar os arquivos e executar o index.html com o auxílio da extensão Live Server no Visual Studio.
 
